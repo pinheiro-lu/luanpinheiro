@@ -1,12 +1,60 @@
-body {
-    background-image: url('https://minhabiblioteca.com.br/wp-content/uploads/2017/12/background.jpg');
-    background-size: auto 100vh;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
     font-family: Arial;
+    font-size: 16px;
+  }
+
+  @media (min-width: 400px) {
+    body {
+      font-size: 20px;
+    }
+  }
+
+  header {
     height: 100vh;
   }
+
+  .back {
+    background-image: url('../IMG/fundo.jpeg');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    height: 100vh;
+  }
+
+  @media (max-width: 1200px) {
+    .back {
+      background-size: auto 100vh;
+    }
+  }
   
+  .superior {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
   .menu {
     background-color: white;
+    filter: opacity(0.65);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 30px;
   }
   
   .menu ul {
@@ -35,4 +83,9 @@ body {
   
   .site-subtitle {
     font-style: italic;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: auto;
   }
