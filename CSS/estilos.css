@@ -5,13 +5,13 @@
   }
 
   body {
-    font-family: Arial;
-    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
   }
 
   @media (min-width: 400px) {
     body {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
@@ -27,7 +27,7 @@
     height: 100vh;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 925px) {
     .back {
       background-size: auto 100vh;
     }
@@ -75,17 +75,67 @@
     text-decoration: underline;
   }
   
+  .title {
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border: 0.5em inset gray; 
+    padding: 0.8em 0.8em;
+  }
+
   .site-subtitle,
   .site-title {
     color: whitesmoke;
     text-align: center;
   }
+
+  .site-title {
+    font-family: 'Satisfy', cursive;
+    font-size: 4em;
+  }
   
   .site-subtitle {
+    font-family: 'Balsamiq Sans', cursive;
     font-style: italic;
+    font-size: 2em;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+  }
+
+  .portfolio h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 1em;
+  }
+
+  @media (min-width: 800px) {
+    .portfolio .grid {
+      align-items: center;
+      grid-template-columns: 350px 350px;
+      height: calc(100vh - 4em - 1.5em);
+      justify-content: space-around;
+    }
   }
 
   .img-portfolio {
-    height: 180px;
-    width: auto;
+    height: auto;
+    width: 20em;
+  }
+
+  @media (min-width: 800px) {
+    .img-portfolio {
+      height: auto;
+      width: 25em;
+    }
+  } 
+
+  .portfolio figure {
+    text-align: center;
   }
