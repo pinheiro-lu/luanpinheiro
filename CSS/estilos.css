@@ -50,11 +50,19 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 1;
   }
 
   .menu a {
     display: block;
     padding: 10px 30px;
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: orange;
+    color: whitesmoke;
   }
   
   .menu ul {
@@ -80,6 +88,17 @@
     border-bottom-right-radius: 2em;
     border: 0.5em inset gray; 
     padding: 0.8em 0.8em;
+    transform: scale(0) translateY(-100vh);
+    opacity: 0;
+
+    animation: ease 3s title-animation forwards;
+  }
+
+  @keyframes title-animation {
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
   }
 
   .site-subtitle,
@@ -99,11 +118,13 @@
     font-size: 2em;
   }
 
+  .contato,
   .portfolio {
     padding: 2em;
     height: 100vh;
   }
 
+  .contato h2
   .portfolio h2 {
     font-family: 'Balsamiq Sans', cursive;
     font-size: 2em;
@@ -127,6 +148,11 @@
   .img-portfolio {
     height: auto;
     width: 20em;
+    transition: transform 300ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.2); 
   }
 
   @media (min-width: 800px) {
@@ -138,4 +164,34 @@
 
   .portfolio figure {
     text-align: center;
+  }
+
+  .contato a {
+    color: black;
+    font-size: 5em;
+    transition: text-shadow 0.5s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 10px 10px 20px gray;
+  }
+
+  .spinner {
+    border: 8px solid rgba(0, 0, 0, .3);
+    border-left-color: rgba(255, 94, 0, 0.3);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }
