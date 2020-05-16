@@ -14,7 +14,7 @@
       <div class="back"></div>
       <div class="superior">
         <nav class="menu">
-          <ul>
+          <ul class="container">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -28,21 +28,68 @@
       </div>
     </header>
 
-    <section class="portfolio" id="portfolio">
+    <section class="sobre container" id="sobre">
+      <h2>Sobre</h2>
+
+      <figure>
+        <img class="fotosobre" src="./IMG/fotosobre.jpg" alt="Luan">
+      </figure>
+
+      <p>
+        Olá a todos, olá a todas. Meu nome é Luan Pereira Pinheiro, e eu sou estudante de Mecatrônica do SENAI "Armando de Arruda Pereira". Além de ser também o Batman e o Bozo.
+      </p>
+
+      <p>
+        Nasci em 17/06/2003 e sou lindíssimo. Pretendo cursar futuramente a faculdade de Engenharia de Software.
+      </p>
+
+      <p>
+        Sempre amei a tecnologia, o que me levou a buscar por cursos atrelados à mesma. Sou iniciante na programação, mas já realizei alguns pequenos projetos utilizando o microcontrolador Arduino.
+      </p>
+
+      <p>
+        Eu gostaria de aproveitar essa seção para mandar um salve pra minha família, muito obrigado por tudo, independente das tretas, amor acima de tudo. Ontem eu era um menino, hoje já sou um rapaz; não sei se eu fui um bom filho, mas sei que estou sendo um bom pai.
+      </p>
+
+      <p>
+        O Pietro é feio.
+      </p>
+
+      <p>
+        Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>.
+      </p>
+    </section>
+
+    <section class="portfolio container" id="portfolio">
       <h2>Portfólio</h2>
       <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./IMG/semaforo.png" alt="Semáforo com Arduino">
-        <figcaption> Semáforo com Arduino (imagem de Flipe-Flope)</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./IMG/WhatsApp Image 2020-05-12 at 21.23.17.jpeg" alt="Bingo com Arduino">
-        <figcaption>Bingo com Arduino</figcaption>
-      </figure>
+        <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./IMG/semaforo.png" alt="Semáforo com Arduino">
+            <figcaption> Semáforo com Arduino (imagem de Flipe-Flope)</figcaption>
+          </figure>
+          <!--<div class="card-back">
+            Esse semáforo é controlado por comunicação Serial.
+          </div>-->
+        </div>
+        </div>
+      
+        <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./IMG/WhatsApp Image 2020-05-12 at 21.23.17.jpeg" alt="Bingo com Arduino">
+            <figcaption>Bingo com Arduino</figcaption>
+          </figure>
+          <!--<div class="card-back">
+            Esse bingo é controlado por apenas 2 botões.
+          </div>-->
+        </div>
+        </div>
     </div>
     </section>
 
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
       <h2>Contato</h2>
       <div class="grid icons">
         <a target="_blank" href="https://github.com/pinheiro-lu">

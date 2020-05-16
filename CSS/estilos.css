@@ -118,17 +118,52 @@
     font-size: 2em;
   }
 
+  .sobre,
   .contato,
   .portfolio {
     padding: 2em;
     height: 100vh;
   }
 
+  @media (min-width: 1000px) {
+    .container {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  }
+
+  .sobre h2,
   .contato h2
   .portfolio h2 {
     font-family: 'Balsamiq Sans', cursive;
     font-size: 2em;
     margin-bottom: 1.5em;
+  }
+
+  .sobre .fotosobre {
+    float: right;
+    margin-left: 2em;
+    height: 16em;
+    width: auto;
+  }
+
+  @media (max-width: 600px) {
+    .sobre .fotosobre {
+      float: none;
+    }    
+  }
+
+  @media (min-width: 1000px) {
+    .sobre .fotosobre {
+      height: 20em;
+    }
+  }
+
+  .sobre p {
+    margin-bottom: 1em;
+    text-indent: 2.5em;
+    text-align: justify;
   }
 
   .portfolio .grid {
@@ -154,6 +189,44 @@
   .img-portfolio:hover {
     transform: scale(1.2); 
   }
+
+  /*.flip-card {
+    perspective: 1000px;
+  }
+
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .card-back {
+    background-color: rgb(224, 90, 0);
+    color: white;
+    height: 160px;
+    width: 20em;
+    transform: rotateY(180deg);
+    font-size: medium;
+  }
+
+  @media (min-width: 800px) {
+    .card-back {
+      height: 240px;
+      width: 25em;
+    }
+  }*/
 
   @media (min-width: 800px) {
     .img-portfolio {
